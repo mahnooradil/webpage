@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1030; /* Ensure it is above other content */
+            background-color: grey;
+        }
+        .second-navbar {
+            position: sticky;
+            top: 60px; /* Adjust based on the height of the first navbar */
+            z-index: 1020; /* Slightly lower than the main navbar */
+            background-color: transparent; /* Start with transparent background */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            color: white; /* Initial text color */
+        }
+        .second-navbar.scrolled {
+            background-color:rgb(202, 31, 31); /* Change to black when scrolled */
+            color: white; /* Keep text color white on black background */
+        }
+        .navbar-brand {
+            font-size: 2rem; 
+            font-weight: bold; 
+            color: #fff; 
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.25rem;
+            font-family: 'Arial', sans-serif;
+            color: white; 
+        }
+        .navbar-nav .nav-link:hover {
+            color:yellow; 
+        }
+        .university-image {
+            width: 100vw; 
+            height: 100vh; 
+            object-fit: cover; 
+            z-index: -1; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+        }
+        .content {
+            position: relative; 
+            z-index: 1; 
+            padding-top: 100vh; /* Space for the button */
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            color: #fff; 
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+        .section:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.5); 
+            color: #000; 
+        }
+        .learn-button {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            border-radius: 0px;
+            width: 100%; /* Full width */
+            z-index: 2;
+            font-size: 1.5rem; /* Increase font size */
+            padding: 15px; /* More padding */
+            background-color: rgb(202, 31, 31); /* Background color */
+            border-radius: 5px; /* Slightly rounded corners */
+            transition: opacity 0.3s; /* Smooth transition for hiding */
+        }
+        .learn-button.hidden {
+            opacity: 0; /* Hidden state */
+            pointer-events: none; /* Prevent clicks */
+        }
+        .card {
+            transition: transform 0.2s; 
+            height: 250px; 
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            height: 150px; 
+            object-fit: cover; 
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; 
+        }
+        .section {
+            padding: 40px 20px;
+            background-color: white;
+            color: black;
+            position: relative; 
+        }
+
+        .social-icons {
+            position: absolute;
+            top: 20px; 
+            right: 20px; 
+        }
+
+        .icon {
+            color: #000; 
+            font-size: 1.5rem; 
+            margin-left: 15px; 
+            transition: color 0.3s; 
+        }
+
+        .icon:hover {
+            color: #007bff;
+        }
+
+        .hover-effect {
+            cursor: pointer;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        .hover-effect:hover {
+            color: #007bff(57,109,2);
+            text-decoration: underline;
+        }
+
+        .list-item {
+            cursor: pointer;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        .list-item:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: rgb(202, 31, 31); 
+            color: white; 
+            padding: 30px 20px; 
+            position: relative;
+            font-size: 1.2rem; 
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .footer-left {
+            font-weight: bold;
+        }
+
+        .footer a {
+            color: white; 
+            margin-left: 20px; 
+            text-decoration: none; 
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ffd700; 
+        }
+        .program-image {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+        }
+    </style>
+   
+    <title>Air University</title>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <h1 class="navbar-brand">Air University</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-underline " style="margin-right: 20px;">
+                    <li class="nav-item" style="margin: 3px;">
+                        <a class="nav-link" href="#">Students</a>
+                    </li>
+                    <li class="nav-item" style="margin: 3px;">
+                        <a class="nav-link" href="#">Faculty</a>
+                    </li>
+                    <li class="nav-item" style="margin: 3px;">
+                        <a class="nav-link" href="#">Staff</a>
+                    </li>
+                    <li class="nav-item" style="margin: 3px;">
+                        <a class="nav-link" href="#">Families</a>
+                    </li>
+                    <li class="nav-item" style="margin: 3px;">
+                        <a class="nav-link" href="#">visitors</a>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg second-navbar">
+        <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav nav-underline">
+                <li class="nav-item" style="margin: 3px;">
+                    <a class="nav-link" href="#ourmission">ourmission</a>
+                </li>
+                <li class="nav-item" style="margin: 3px;">
+                    <a class="nav-link" href="#campusnews">campusnews</a>
+                </li>
+                <li class="nav-item" style="margin: 3px;">
+                    <a class="nav-link" href="#academic">Academic</a>
+                </li>
+                <li class="nav-item" style="margin: 3px;">
+                    <a class="nav-link" href="#research">Research</a>
+                </li>
+                <li class="nav-item" style="margin: 3px;">
+                    <a class="nav-link" href="#health-care">Health Care</a>
+                </li>
+                <li class="nav-item" style="margin: 3px;">
+                    <a class="nav-link" href="#campus-life">Campus Life</a>
+                </li>
+                <li class="nav-item" style="margin: 3px;">
+                    <a class="nav-link" href="#admission">Admission</a>
+                </li>
+                <li class="nav-item" style="margin: 3px;">
+                    <a class="nav-link" href="#aboutus">About us</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+<img src="https://www.stanford.edu/wp-content/uploads/2023/10/Hero-3-2-2048x1362.jpg" alt="Air University" class="university-image">
+<a href="#societymission" class="btn btn-danger btn-lg learn-button">Explore Air university</a>
+
+<div class="content">
+    <div id="ourmission" class="section" style="background-color: white; color: black;">
+        <h1 class="display-3 fw-bolder " style="color:black;font-family: 'Times New Roman', Times, serif;">Our Mission:</h1>
+        <p  class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">
+            Our mission is to contribute to the world by educating students for lives of leadership and contribution with integrity; advancing 
+            fundamental knowledge and cultivating creativity;leading in pioneering research for effective clinical therapies; and accelerating 
+            solutions and amplifying their impact.</p>
+        <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 40px;">More about stanford</button>
+    </div>
+
+    <div id="campusnews" class="section" style="background-color:lightgrey; color: black;">
+        <h2 class="display-3 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Campus News</h2>
+        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore the various programs we offer to our students.</p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQEmektG2VDKcg/feedshare-shrink_800/feedshare-shrink_800/0/1707922707787?e=2147483647&v=beta&t=zOFXdBP41N_1yR9adj2ciRRSQZRMV6Pgp1FsZsnyc7U" alt="Digital Marketing Workshop" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing Workshop</h5>
+                            <p class="card-text">Our recent workshop on digital marketing helped students gain vital skills.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/24_2.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Science Fair</h5>
+                            <p class="card-text">The annual science fair showcased innovative projects from our students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://live.staticflickr.com/65535/50924873058_78c7195b1b_z.jpg" alt="Cultural Festival" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Cultural Festival</h5>
+                            <p class="card-text">Our cultural festival celebrated diversity with performances.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/76_7.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Science Fair</h5>
+                            <p class="card-text">The annual science fair showcased innovative projects from our students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://www.au.edu.pk/AU_New_Assets/images/blog/FOHS3.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Science Fair</h5>
+                            <p class="card-text">The annual science fair showcased innovative projects from our students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/24_2.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Science Fair</h5>
+                            <p class="card-text">The annual science fair showcased innovative projects from our students.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="academic" class="section" style="background-color: white; color: black;">
+        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Academics</h2>
+        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore our academic programs and offerings.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="https://aack.au.edu.pk/AU_Assets/HomeImages/Prime%20Minister%27s%20Youth%20Laptop%20Scheme%202023.png" alt="Academic Program 1" class="img-fluid">
+                    <h5>Program 1</h5>
+                    <p>Description of academic program 1.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://www.au.edu.pk/pages/Faculties/AUSOM/Department/AUSOM/DMS/Event_Gallery/AUTAS_6.jpg" alt="Academic Program 2" class="img-fluid">
+                    <h5>Program 2</h5>
+                    <p>Description of academic program 2.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://www.au.edu.pk/pages/Faculties/Computing_AI/Cyber_Security/Assets/Lab4.jpg" alt="Academic Program 3" class="img-fluid">
+                    <h5>Program 3</h5>
+                    <p>Description of academic program 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="research" class="section" style="background-color: lightgrey; color: black;">
+        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;"> Research</h2>
+        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Get in touch with us for more information.</p>
+        <div class="col-md-12">
+        <img src="https://localist-images.azureedge.net/photos/47721449209779/square_300/c049d9958480c5427d4572b20fd1c7ad6fd5bfd4.jpg" alt="Contact Us">
+        <img src="https://localist-images.azureedge.net/photos/47870422855488/square_300/ee9f904b89ce5fb7176839d949972966930037f6.jpg" alt="Contact Us">
+        <img src="https://localist-images.azureedge.net/photos/47968374647782/square_300/2b2bc4291c09a568cf0d638fbdca6a1901453df8.jpg" alt="Contact Us">
+        <img src="https://localist-images.azureedge.net/photos/47739087822349/square_300/8d1664ca6fbc9de1c93b376d64d0879e6a7272bb.jpg" alt="Contact Us">
+    </div>
+    </div>
+
+    <div id="health-care" class="section" style="background-color: white; color: black;">
+        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Health Care</h2>
+        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Clinical care, research, and education fuel innovation to advance human health.</p>
+        <img src="https://www.stanford.edu/wp-content/uploads/2022/04/health-care-banner-2.jpg">
+    </div>
+
+    <div id="campus-life" class="section" style="background-color: lightgrey; color: black;">
+        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Campus Life</h2>
+        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Experience the vibrant campus culture.</p>
+        <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Campus-life-banner4.jpg">
+    </div>
+    <div id="admission" class="section" style="background-color: white; color: black;">
+        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Admission</h2>
+        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Learn about our health services.</p>
+        <img src="https://www.stanford.edu/wp-content/uploads/2022/04/SU_Spring2022_SocialBanners_TW_1500x500_v1-2.png">
+    </div>
+    <div id="aboutus" class="section">
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">About Us</h2>
+        <div class="container">
+            <div class="row display-7 fw-bolder">
+                <div class="col-md-3 mb-4">
+                    <h3 class="hover-effect">Schools</h3>
+                    <ul>
+                        <li class="list-item">School of Engineering</li>
+                        <li class="list-item">School of Business</li>
+                        <li class="list-item">School of Arts</li>
+                        <li class="list-item">School of Health Sciences</li>
+                        <li class="list-item">School of Education</li>
+                        <li class="list-item">School of Social Sciences</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h3 class="hover-effect">Academic</h3>
+                    <ul>
+                        <li class="list-item">Bachelor's Programs</li>
+                        <li class="list-item">Master's Programs</li>
+                        <li class="list-item">PhD Programs</li>
+                        <li class="list-item">Online Courses</li>
+                        <li class="list-item">Continuing Education</li>
+                        <li class="list-item">Internship Opportunities</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h3 class="hover-effect">Health Care</h3>
+                    <ul>
+                        <li class="list-item">Campus Health Services</li>
+                        <li class="list-item">Mental Health Resources</li>
+                        <li class="list-item">Health Education Programs</li>
+                        <li class="list-item">Emergency Services</li>
+                        <li class="list-item">Wellness Workshops</li>
+                        <li class="list-item">Health Insurance Information</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h3 class="hover-effect">About Air</h3>
+                    <ul>
+                        <li class="list-item">History of Air University</li>
+                        <li class="list-item">Mission and Vision</li>
+                        <li class="list-item">Leadership Team</li>
+                        <li class="list-item">Campus Locations</li>
+                        <li class="list-item">Accreditations</li>
+                        <li class="list-item">Community Engagement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-left">
+                <span class="display-3 fw-bold" style="color:white;font-family: 'Times New Roman', Times, serif;">Air University</span>
+            </div>
+            <div class="footer-right">
+                <span>contact on this Number 112-317-314</span><br>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Change navbar background on scroll
+    window.addEventListener('scroll', function() {
+        const secondNavbar = document.querySelector('.second-navbar');
+        const learnButton = document.querySelector('.learn-button');
+        if (window.scrollY > 0) {
+            secondNavbar.classList.add('scrolled');
+            learnButton.classList.add('hidden'); // Hide the button on scroll
+        } else {
+            secondNavbar.classList.remove('scrolled');
+            learnButton.classList.remove('hidden'); // Show the button when at top
+        }
+    });
+</script>
+</body>
+</html>
