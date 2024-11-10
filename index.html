@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -174,6 +175,40 @@
             height: 200px; 
             object-fit: cover; 
         }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: lightgrey;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            padding: 20px;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+        .card img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 15px;
+        }
     </style>
    
     <title>Air University</title>
@@ -249,7 +284,7 @@
 
 <div class="content">
     <div id="ourmission" class="section" style="background-color: white; color: black;">
-        <h1 class="display-3 fw-bolder " style="color:black;font-family: 'Times New Roman', Times, serif;">Our Mission:</h1>
+        <h1 class="display-4 fw-bold " style="color:black;font-family: 'Times New Roman', Times, serif;">Our Mission:</h1>
         <p  class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">
             Our mission is to contribute to the world by educating students for lives of leadership and contribution with integrity; advancing 
             fundamental knowledge and cultivating creativity;leading in pioneering research for effective clinical therapies; and accelerating 
@@ -258,34 +293,34 @@
     </div>
 
     <div id="campusnews" class="section" style="background-color:lightgrey; color: black;">
-        <h2 class="display-3 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Campus News</h2>
-        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore the various programs we offer to our students.</p>
+        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Campus News</h2>
+        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore the various programs we offer to our students.</p>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQEmektG2VDKcg/feedshare-shrink_800/feedshare-shrink_800/0/1707922707787?e=2147483647&v=beta&t=zOFXdBP41N_1yR9adj2ciRRSQZRMV6Pgp1FsZsnyc7U" alt="Digital Marketing Workshop" class="card-img-top img-fluid">
+                    <div class="card h-100" >
+                        <img src="https://www.stanford.edu/wp-content/uploads/2024/10/A-woman-and-children-in-an-Indian-farm-field.-credit_EqualStock-_-Unsplash.jpg" alt="Digital Marketing Workshop" class="card-img-top img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Digital Marketing Workshop</h5>
-                            <p class="card-text">Our recent workshop on digital marketing helped students gain vital skills.</p>
+                            <h5 class="card-title ">Health & Medicine </h5>
+                            <p class="card-text">Air launched center focues on human and planetary health</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100">
-                        <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/24_2.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                        <img src="https://www.stanford.edu/wp-content/uploads/2024/11/photo-key-Lester-Unraveling20the20Spiderweb20of20Partnerships20Americans20Use20to20Evade20Taxes.jpg.webp" alt="Annual Science Fair" class="card-img-top img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Annual Science Fair</h5>
-                            <p class="card-text">The annual science fair showcased innovative projects from our students.</p>
+                            <h5 class="card-title" style="color: maroon;">BUISNESS</h5>
+                            <p class="card-text">Mapping tha maze where the IRS could find billions in unpaid taxes</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100">
-                        <img src="https://live.staticflickr.com/65535/50924873058_78c7195b1b_z.jpg" alt="Cultural Festival" class="card-img-top img-fluid">
+                        <img src="https://www.stanford.edu/wp-content/uploads/2024/10/20240814_Office_Objects_with_Nate_Persily-_95A1019_-big-grin.jpg" alt="Cultural Festival" class="card-img-top img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Cultural Festival</h5>
-                            <p class="card-text">Our cultural festival celebrated diversity with performances.</p>
+                            <h5 class="card-title" style="color: maroon;">LAW</h5>
+                            <p class="card-text">Nate the persily's meusm of election history</p>
                         </div>
                     </div>
                 </div>
@@ -293,94 +328,186 @@
             <div class="row justify-content-center">
                 <div class="col-md-3 mb-4">
                     <div class="card h-100">
-                        <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/76_7.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                        <img src="https://www.stanford.edu/wp-content/uploads/2024/11/20201103_Vote11.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Annual Science Fair</h5>
-                            <p class="card-text">The annual science fair showcased innovative projects from our students.</p>
+                            <h5 class="card-title" style="color: maroon;">SOCIAL SCIENCES</h5>
+                            <p class="card-text">Six things political scientist are watching this election</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100">
-                        <img src="https://www.au.edu.pk/AU_New_Assets/images/blog/FOHS3.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                        <img src="https://www.stanford.edu/wp-content/uploads/2024/11/20240829_roar_emcapistranoabreu_diegolima-004.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Annual Science Fair</h5>
-                            <p class="card-text">The annual science fair showcased innovative projects from our students.</p>
+                            <h5 class="card-title " style="color: maroon;">EDUCATION</h5>
+                            <p class="card-text">Education is the power of sudents they have to use this in good manners</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100">
-                        <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/24_2.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                        <img src="https://www.stanford.edu/wp-content/uploads/2024/10/20241009_Amulets_95A8715.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Annual Science Fair</h5>
-                            <p class="card-text">The annual science fair showcased innovative projects from our students.</p>
+                            <h5 class="card-title" style="color: maroon;">ARTS</h5>
+                            <p class="card-text">Hiding passion of youngsters they have to show this to the world and dont giveup</p>
                         </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;">More about stanford</button>
+            </div>
+        </div>
+    </div>
+    <div id="academic" class="section" style="background-color:white; color: black;">
+        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Academic</h2>
+        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore the various programs we offer to our students:</p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://t4.ftcdn.net/jpg/03/14/92/75/360_F_314927575_yqFMAuXFTNC6gBflR2njRZ4bQb8dAb7y.jpg" alt="Digital Marketing Workshop" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Information Technology</h5>
+                        <p class="card-text">IT includes computers, networking, storage, and other physical devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://media.istockphoto.com/id/1452604857/photo/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.jpg?s=612x612&w=0&k=20&c=GkAOxzduJbUKpS2-LX_l6jSKtyhdKlnPMo2ito4xpR4=" alt="Annual Science Fair" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Artificial Intelligence</h5>
+                        <p class="card-text">AI is an evolving technology that tries to simulate human intelligence using machines. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_640.jpg" alt="Cultural Festival" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Science</h5>
+                        <p class="card-text">CS is the study of computers and computational systems</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div id="academic" class="section" style="background-color: white; color: black;">
-        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Academics</h2>
-        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore our academic programs and offerings.</p>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="https://aack.au.edu.pk/AU_Assets/HomeImages/Prime%20Minister%27s%20Youth%20Laptop%20Scheme%202023.png" alt="Academic Program 1" class="img-fluid">
-                    <h5>Program 1</h5>
-                    <p>Description of academic program 1.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="https://www.au.edu.pk/pages/Faculties/AUSOM/Department/AUSOM/DMS/Event_Gallery/AUTAS_6.jpg" alt="Academic Program 2" class="img-fluid">
-                    <h5>Program 2</h5>
-                    <p>Description of academic program 2.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="https://www.au.edu.pk/pages/Faculties/Computing_AI/Cyber_Security/Assets/Lab4.jpg" alt="Academic Program 3" class="img-fluid">
-                    <h5>Program 3</h5>
-                    <p>Description of academic program 3.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://media.istockphoto.com/id/1412282189/photo/lock-network-technology-concept.jpg?s=612x612&w=0&k=20&c=hripuxLs9pS_7Ln6YWQR-Ow2_-BU5RdQ4vOY8s1q1iQ=" alt="Annual Science Fair" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Cyber Security</h5>
+                        <p class="card-text">Cybersecurity is the practice of defending computers, servers, and data from malicious attacks.</p>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz_rLGqrIduC7c3WhZQCx6a6BuU6H6ewrcPA&s" alt="Annual Science Fair" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Science</h5>
+                        <p class="card-text">Data science is the study of data to extract meaningful insights for business.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://www.shutterstock.com/shutterstock/photos/2284126663/display_1500/stock-photo-data-science-and-big-data-technology-scientist-computing-analysing-and-visualizing-complex-data-2284126663.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Software Engineering</h5>
+                        <p class="card-text">principles and knowledge of programming languages to build software solutions for end users.</p>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;">More about Academies</button>
+
         </div>
     </div>
+</div>
+   
+<div id="research" class="section" style="background-color: lightgrey;">
+    <h2 class="display-1 fw-bold">Research</h2>
+    <p class="display-5">Get in touch with us for more information.</p>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Woods_Institute.jpg" alt="Contact Us">
+            <div class="card-content">
+                <h3 class="fw-bold"> Woods Institute</h3>
+                <p style="margin-top: 20px;">Working toward a future in which societies meet peoples needs for water,
+                     food and health while protecting and nurturing the planet.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.stanford.edu/wp-content/uploads/2017/03/neuroscience-highlight.jpg" alt="Contact Us">
+            <div class="card-content">
+                <h3 class="fw-bold">Air Bio-X</h3>
+                <p style="margin-top: 20px;">Biomedical and life science researchers, clinicians, engineers, physicists
+                     and computational scientists come together to unlock the secrets of the human body.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.stanford.edu/wp-content/uploads/2017/03/humanities-highlight.jpg" alt="Contact Us">
+            <div class="card-content">
+                <h3 class="fw-bold">Air humanity center</h3>
+                <p style="margin-top: 20px;">TAdvancing research into the historical, philosophical, literary, artistic, and cultural dimensions of the human experience.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.stanford.edu/wp-content/uploads/2022/04/HooverTower.jpg" alt="Contact Us">
+            <div class="card-content">
+                <h3 class="fw-bold">Hoover Institution</h3>
+                <p style="margin-top: 20px;">The Hoover Institution, devoted to the study of domestic and international affairs</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.stanford.edu/wp-content/uploads/2017/05/slac-01.jpg"alt="Contact Us">
+            <div class="card-content">
+                <h5 class="fw-bold"> Slac National Accelerator Laboratory</h5>
+                <p style="margin-top: 05px;">SLAC is a U.S. Department of Energy national laboratory operated by Stanford, conducting research in chemistry, materials and energy.</p>
+            </div>
+        </div>
+        
+    </div>
+    <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 120px;">More about Research</button>
+</div>
 
-    <div id="research" class="section" style="background-color: lightgrey; color: black;">
-        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;"> Research</h2>
-        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Get in touch with us for more information.</p>
-        <div class="col-md-12">
-        <img src="https://localist-images.azureedge.net/photos/47721449209779/square_300/c049d9958480c5427d4572b20fd1c7ad6fd5bfd4.jpg" alt="Contact Us">
-        <img src="https://localist-images.azureedge.net/photos/47870422855488/square_300/ee9f904b89ce5fb7176839d949972966930037f6.jpg" alt="Contact Us">
-        <img src="https://localist-images.azureedge.net/photos/47968374647782/square_300/2b2bc4291c09a568cf0d638fbdca6a1901453df8.jpg" alt="Contact Us">
-        <img src="https://localist-images.azureedge.net/photos/47739087822349/square_300/8d1664ca6fbc9de1c93b376d64d0879e6a7272bb.jpg" alt="Contact Us">
-    </div>
-    </div>
+</body>
+</html>
+
 
     <div id="health-care" class="section" style="background-color: white; color: black;">
-        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Health Care</h2>
-        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Clinical care, research, and education fuel innovation to advance human health.</p>
-        <img src="https://www.stanford.edu/wp-content/uploads/2022/04/health-care-banner-2.jpg">
+        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Health Care</h2>
+        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Clinical care, research, and education fuel innovation to advance human health.</p>
+        <div class="row">
+        <div class="col-6">
+            <div class="card" style="width: 500px; height: 100px;">
+            <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Health-care-2-1-2048x1365.jpg"> 
+            </div> 
+        </div>
+        <div class="col-6">
+            <div class="card" style="width: 500px; height: 100px;">
+            <img src="https://www.stanford.edu/wp-content/uploads/2022/04/stephanie-chao-rounding-4-rachel_baker-1-2048x1367.jpg">  
+            </div>
+        </div>
+        </div>
+        <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 300px;">More about Health</button>
+        
     </div>
 
     <div id="campus-life" class="section" style="background-color: lightgrey; color: black;">
-        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Campus Life</h2>
-        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Experience the vibrant campus culture.</p>
+        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Campus Life</h2>
+        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Our thriving residential campus is home to a community of <br>
+            creative and accomplished people from around the world.</p>
         <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Campus-life-banner4.jpg">
+        <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 50px;">More about Campus life</button>
     </div>
     <div id="admission" class="section" style="background-color: white; color: black;">
-        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Admission</h2>
-        <p class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">Learn about our health services.</p>
+        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Admission</h2>
+        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore the possibilities of a Stanford education.</p>
         <img src="https://www.stanford.edu/wp-content/uploads/2022/04/SU_Spring2022_SocialBanners_TW_1500x500_v1-2.png">
+        <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 30px;">More about Admission</button>
     </div>
     <div id="aboutus" class="section">
-        <div class="social-icons">
-            <a href="https://www.instagram.com" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.twitter.com" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com" target="_blank" class="icon"><i class="fab fa-youtube"></i></a>
-        </div>
-        <h2 class="display-1 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">About Us</h2>
+        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">About Us</h2>
         <div class="container">
             <div class="row display-7 fw-bolder">
                 <div class="col-md-3 mb-4">
