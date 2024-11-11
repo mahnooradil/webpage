@@ -66,23 +66,6 @@
             background-color: rgba(255, 255, 255, 0.5); 
             color: #000; 
         }
-        .learn-button {
-            position: fixed;
-            bottom: 20px;
-            left: 0;
-            border-radius: 0px;
-            width: 100%; /* Full width */
-            z-index: 2;
-            font-size: 1.5rem; /* Increase font size */
-            padding: 15px; /* More padding */
-            background-color: rgb(202, 31, 31); /* Background color */
-            border-radius: 5px; /* Slightly rounded corners */
-            transition: opacity 0.3s; /* Smooth transition for hiding */
-        }
-        .learn-button.hidden {
-            opacity: 0; /* Hidden state */
-            pointer-events: none; /* Prevent clicks */
-        }
         .card {
             transition: transform 0.2s; 
             height: 250px; 
@@ -211,7 +194,7 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item" style="margin: 3px;">
-                        <a class="nav-link" href="student.html">Student</a>
+                        <a class="nav-link" href="student.html">Students</a>
                     </li>
                     <li class="nav-item" style="margin: 3px;">
                         <a class="nav-link" href="#">Faculty</a>
@@ -232,7 +215,6 @@
             </div>
         </div>
     </nav>
-    
     <nav class="navbar navbar-expand-lg second-navbar">
         <div class="container-fluid justify-content-center">
             <ul class="navbar-nav nav-underline">
@@ -240,30 +222,22 @@
                     <a class="nav-link" href="#ourmission">ourmission</a>
                 </li>
                 <li class="nav-item" style="margin: 3px;">
-                    <a class="nav-link" href="#campusnews">campusnews</a>
+                    <a class="nav-link" href="#events">events</a>
                 </li>
                 <li class="nav-item" style="margin: 3px;">
                     <a class="nav-link" href="#academic">Academic</a>
                 </li>
                 <li class="nav-item" style="margin: 3px;">
-                    <a class="nav-link" href="#research">Research</a>
+                    <a class="nav-link" href="#resources">Resources</a>
                 </li>
                 <li class="nav-item" style="margin: 3px;">
                     <a class="nav-link" href="#health-care">Health Care</a>
                 </li>
-                <li class="nav-item" style="margin: 3px;">
-                    <a class="nav-link" href="#campus-life">Campus Life</a>
-                </li>
-                <li class="nav-item" style="margin: 3px;">
-                    <a class="nav-link" href="#admission">Admission</a>
-                </li>
-                <li class="nav-item" style="margin: 3px;">
-                    <a class="nav-link" href="#aboutus">About us</a>
-                </li>
-                
             </ul>
         </div>
     </nav>
+    
+    
 
 <img src="https://www.stanford.edu/wp-content/uploads/2023/10/Hero-3-2-2048x1362.jpg" alt="Air University" class="university-image">
 <div class="row">
@@ -273,84 +247,63 @@
                 Air university</h1>
 </div>
 
-</div>
-<a href="#societymission" class="btn btn-danger btn-lg learn-button">Explore Air university</a>
-
 <div class="content">
     <div id="ourmission" class="section" style="background-color: white; color: black;">
-        <h1 class="display-4 fw-bold " style="color:black;font-family: 'Times New Roman', Times, serif;">Our Mission:</h1>
+        <h1 class="display-4 fw-bold " style="color:black;font-family: 'Times New Roman', Times, serif;">mission for students:</h1>
         <p  class="display-5 " style="color:black;font-family: 'Times New Roman', Times, serif;">
-            Our mission is to contribute to the world by educating students for lives of leadership and contribution with integrity; advancing 
-            fundamental knowledge and cultivating creativity;leading in pioneering research for effective clinical therapies; and accelerating 
-            solutions and amplifying their impact.</p>
-        <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 40px;">More about stanford</button>
-    </div>
+            The mission of Air University is to achieve excellence in teaching and research for producing graduates with sound professional 
+            knowledge, integrity of character , a keen sense of social responsibility and a passion for lifelong learning.</p>
+        </div>
 
-    <div id="campusnews" class="section" style="background-color:lightgrey; color: black;">
-        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Campus News</h2>
-        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore the various programs we offer to our students.</p>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100" >
-                        <img src="https://www.stanford.edu/wp-content/uploads/2024/10/A-woman-and-children-in-an-Indian-farm-field.-credit_EqualStock-_-Unsplash.jpg" alt="Digital Marketing Workshop" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title ">Health & Medicine </h5>
-                            <p class="card-text">Air launched center focues on human and planetary health</p>
+        <div id="events" class="section" style="background-color:lightgray; color: black;">
+            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 46px; margin: 0 0 10px 0;">
+                Events for students
+            </h2>
+            <p style="font-size: 25px; line-height: 1.6; margin-top: 16px;">
+                Our university hosts a variety of exciting events throughout the academic year for students.
+            </p>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="https://isra.edu.pk/wp-content/uploads/2024/04/433876377_745157177643773_2507394226922872151_n.jpg" class="card-img-top img-fluid" alt="Welcome Party">
+                            <div class="card-body">
+                                <h5 class="card-title">Sports Gala</h5>
+                                <p class="card-text">Sports Gala is an exciting event typically organized by educational institutions, communities, or organizations to celebrate and promote sports and athletic activities. It often includes a variety of competitions, games, and activities that encourage participation among students and faculty</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/76_8.jpg" class="card-img-top img-fluid" alt="Seminar AU">
+                            <div class="card-body">
+                                <h5 class="card-title">Seminar AU</h5>
+                                <p class="card-text">A seminar at AU that promises to enrich your academic experience and expand your knowledge on relevant topics in your field of study. Many seminars include interactive components such as Q&A sessions, panel discussions, and workshops, allowing participants to engage directly with the speakers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/119_1.jpg" class="card-img-top img-fluid" alt="Excellence Ceremony">
+                            <div class="card-body">
+                                <h5 class="card-title">Air Tech</h5>
+                                <p class="card-text">The Excellence Ceremony is celebrating the outstanding achievements of students, faculty, and staff.refers to a range of technological innovations and advancements related to travel, aerospace engineering.It can encompass various fields, including aviation technology, and environmental sustainability</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="https://au.edu.pk/Pages/NewsEvents/EventGallary/76_7.jpg" class="card-img-top img-fluid" alt="Cultural Festival">
+                            <div class="card-body">
+                                <h5 class="card-title">Cultural Festival</h5>
+                                <p class="card-text">The annual cultural festival celebrated diversity with performances in our university.A Cultural Festival is a vibrant celebration that showcases the diverse traditions, arts, and heritage of a community or institution. These festivals serve as a platform for cultural exchange and exploration</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="https://www.stanford.edu/wp-content/uploads/2024/11/photo-key-Lester-Unraveling20the20Spiderweb20of20Partnerships20Americans20Use20to20Evade20Taxes.jpg.webp" alt="Annual Science Fair" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: maroon;">BUISNESS</h5>
-                            <p class="card-text">Mapping tha maze where the IRS could find billions in unpaid taxes</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="https://www.stanford.edu/wp-content/uploads/2024/10/20240814_Office_Objects_with_Nate_Persily-_95A1019_-big-grin.jpg" alt="Cultural Festival" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: maroon;">LAW</h5>
-                            <p class="card-text">Nate the persily's meusm of election history</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="https://www.stanford.edu/wp-content/uploads/2024/11/20201103_Vote11.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: maroon;">SOCIAL SCIENCES</h5>
-                            <p class="card-text">Six things political scientist are watching this election</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="https://www.stanford.edu/wp-content/uploads/2024/11/20240829_roar_emcapistranoabreu_diegolima-004.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title " style="color: maroon;">EDUCATION</h5>
-                            <p class="card-text">Education is the power of sudents they have to use this in good manners</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="https://www.stanford.edu/wp-content/uploads/2024/10/20241009_Amulets_95A8715.jpg" alt="Annual Science Fair" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: maroon;">ARTS</h5>
-                            <p class="card-text">Hiding passion of youngsters they have to show this to the world and dont giveup</p>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;">More about stanford</button>
             </div>
         </div>
-    </div>
+        
     <div id="academic" class="section" style="background-color:white; color: black;">
         <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Academic</h2>
         <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore the various programs we offer to our students:</p>
@@ -418,73 +371,36 @@
     </div>
 </div>
    
-<div id="research" class="section" style="background-color: lightgrey;">
-    <h2 class="display-1 fw-bold">Research</h2>
-    <p class="display-5">Get in touch with us for more information.</p>
+<div id="resources" class="section" style="background-color: lightgrey;">
+    <h2 class="display-1 fw-bold">Resourcse for students:</h2>
+    <p class="display-5">We give many resources to easy thei life</p>
     <div class="card-container">
         <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Woods_Institute.jpg" alt="Contact Us">
+            <img src="https://5.imimg.com/data5/OI/SY/YY/SELLER-3947012/complete-interior-technical-services-for-auditoriums-500x500.jpg" alt="Contact Us">
             <div class="card-content">
-                <h3 class="fw-bold"> Woods Institute</h3>
-                <p style="margin-top: 20px;">Working toward a future in which societies meet peoples needs for water,
-                     food and health while protecting and nurturing the planet.</p>
+                <h3 class="fw-bold">Auditorium</h3>
             </div>
         </div>
         <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2017/03/neuroscience-highlight.jpg" alt="Contact Us">
+            <img src="https://www.au.edu.pk/Pages/NewsEvents/EventGallary/101_27.jpg" alt="Contact Us">
             <div class="card-content">
-                <h3 class="fw-bold">Air Bio-X</h3>
-                <p style="margin-top: 20px;">Biomedical and life science researchers, clinicians, engineers, physicists
-                     and computational scientists come together to unlock the secrets of the human body.</p>
+                <h3 class="fw-bold">Sports Center</h3>
             </div>
         </div>
         <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2017/03/humanities-highlight.jpg" alt="Contact Us">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp3o8QhGVEUKoSOhp5erlP8ncCK-Us0_3dhw&sx" alt="Contact Us">
             <div class="card-content">
-                <h3 class="fw-bold">Air humanity center</h3>
-                <p style="margin-top: 20px;">TAdvancing research into the historical, philosophical, literary, artistic, and cultural dimensions of the human experience.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2022/04/HooverTower.jpg" alt="Contact Us">
-            <div class="card-content">
-                <h3 class="fw-bold">Hoover Institution</h3>
-                <p style="margin-top: 20px;">The Hoover Institution, devoted to the study of domestic and international affairs</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2017/05/slac-01.jpg"alt="Contact Us">
-            <div class="card-content">
-                <h5 class="fw-bold"> Slac National Accelerator Laboratory</h5>
-                <p style="margin-top: 05px;">SLAC is a U.S. Department of Energy national laboratory operated by Stanford, conducting research in chemistry, materials and energy.</p>
+                <h3 class="fw-bold">Libraries</h3>
             </div>
         </div>
         
     </div>
-    <hr class="border border-dark border-2 opacity-50" style="width: 1200px; margin-top: 110px;">
-    <div class="row" style="margin-top: 15px ;">
-      <div class="col-4">
-        <h1 class="display-6 fw-bold" style="font-family: 'Times New Roman', Times, serif; ">15 Institutes</h1>
-        <p style="text-align: center; font-size: 20px;font-family: 'Times New Roman', Times, serif; ">Cross interdisciplinary boundaries</p>
-      </div>
-      <div class="col-4">
-        <h1 class="display-6 fw-bold" style="font-family: 'Times New Roman', Times, serif;">20 Libraries</h1>
-        <p style="text-align: center; font-size: 20px;font-family: 'Times New Roman', Times, serif; ">hold over 12 million items</p>
-      </div>
-   <div class="col-4">
-        <h1 class="display-6 fw-bold" style="font-family: 'Times New Roman', Times, serif;">$1.98 Billion</h1>
-        <p style="text-align: center; font-size: 20px;font-family: 'Times New Roman', Times, serif;">sponsored research budget</p>
-      </div>
-      <hr class="border border-dark border-2 opacity-50" style="width: 1200px;margin-left: 330px;">
 </div>
-    <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 0px;">More about Research</button>
-</div>
-
 
 
     <div id="health-care" class="section" style="background-color: white; color: black;">
         <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Health Care</h2>
-        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Clinical care, research, and education fuel innovation to advance human health.</p>
+        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Air university also provide Health care for students</p>
         <div class="row">
         <div class="col-6">
             <div class="card" style="width: 500px; height: 100px;">
@@ -516,85 +432,7 @@
         <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 10px;">More about Health</button>
         
     </div>
-
-    <div id="campus-life" class="section" style="background-color: lightgrey; color: black;">
-        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Campus Life</h2>
-        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Our thriving residential campus is home to a community of <br>
-            creative and accomplished people from around the world.</p>
-        <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Campus-life-banner4.jpg">
-        <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 50px;">More about Campus life</button>
-    </div>
-    <div id="admission" class="section" style="background-color: white; color: black;">
-        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">Admission</h2>
-        <p class="display-6 " style="color:black;font-family: 'Times New Roman', Times, serif;">Explore the possibilities of a Stanford education.</p>
-        <img src="https://www.stanford.edu/wp-content/uploads/2022/04/SU_Spring2022_SocialBanners_TW_1500x500_v1-2.png">
-        <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 30px;">More about Admission</button>
-    </div>
-    <div id="aboutus" class="section">
-        <h2 class="display-4 fw-bold" style="color:black;font-family: 'Times New Roman', Times, serif;">About Us</h2>
-        <div class="container">
-            <div class="row display-7 fw-bolder">
-                <div class="col-md-3 mb-4">
-                    <h3 class="hover-effect">Schools</h3>
-                    <ul>
-                        <li class="list-item">School of Engineering</li>
-                        <li class="list-item">School of Business</li>
-                        <li class="list-item">School of Arts</li>
-                        <li class="list-item">School of Health Sciences</li>
-                        <li class="list-item">School of Education</li>
-                        <li class="list-item">School of Social Sciences</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h3 class="hover-effect">Academic</h3>
-                    <ul>
-                        <li class="list-item">Bachelor's Programs</li>
-                        <li class="list-item">Master's Programs</li>
-                        <li class="list-item">PhD Programs</li>
-                        <li class="list-item">Online Courses</li>
-                        <li class="list-item">Continuing Education</li>
-                        <li class="list-item">Internship Opportunities</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h3 class="hover-effect">Health Care</h3>
-                    <ul>
-                        <li class="list-item">Campus Health Services</li>
-                        <li class="list-item">Mental Health Resources</li>
-                        <li class="list-item">Health Education Programs</li>
-                        <li class="list-item">Emergency Services</li>
-                        <li class="list-item">Wellness Workshops</li>
-                        <li class="list-item">Health Insurance Information</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h3 class="hover-effect">About Air</h3>
-                    <ul>
-                        <li class="list-item">History of Air University</li>
-                        <li class="list-item">Mission and Vision</li>
-                        <li class="list-item">Leadership Team</li>
-                        <li class="list-item">Campus Locations</li>
-                        <li class="list-item">Accreditations</li>
-                        <li class="list-item">Community Engagement</li>
-                    </ul>
-                </div>
-                <div class="row" style="margin-left: 200px;">
-                    <div class="col-md-2 mb-3">
-                        <a href="#" class="btn btn-outline-danger btn-block box-button">Visiting</a>
-                    </div>
-                    <div class="col-md-2 mb-3">
-                        <a href="#" class="btn btn-outline-danger btn-block box-button">Applying</a>
-                    </div>
-                    <div class="col-md-2 mb-3">
-                        <a href="#" class="btn btn-outline-danger btn-block box-button">Faculty Positions</a>
-                    </div>
-                    <div class="col-md-2 mb-3">
-                        <a href="#" class="btn btn-outline-danger btn-block box-button">Contact</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+   
     <footer class="footer">
         <div class="container">
             <div class="footer-left">
