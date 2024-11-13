@@ -9,20 +9,20 @@
         .navbar {
             position: sticky;
             top: 0;
-            z-index: 1030; /* Ensure it is above other content */
-            background-color: grey;
+            z-index: 1030; 
+            background-color: rgb(202, 31, 31); 
         }
         .second-navbar {
             position: sticky;
-            top: 60px; /* Adjust based on the height of the first navbar */
-            z-index: 1020; /* Slightly lower than the main navbar */
-            background-color: transparent; /* Start with transparent background */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-            color: white; /* Initial text color */
+            top: 60px; 
+            z-index: 1020; 
+            background-color: transparent; 
+            transition: background-color 0.3s, color 0.3s; 
+            color: white; 
         }
         .second-navbar.scrolled {
-            background-color:rgb(202, 31, 31); /* Change to black when scrolled */
-            color: white; /* Keep text color white on black background */
+            background-color:rgb(202, 31, 31);
+            color: white; 
         }
         .navbar-brand {
             font-size: 2rem; 
@@ -35,7 +35,7 @@
             color: white; 
         }
         .navbar-nav .nav-link:hover {
-            color:yellow; 
+            color: yellow; 
         }
         .university-image {
             width: 100vw; 
@@ -49,7 +49,7 @@
         .content {
             position: relative; 
             z-index: 1; 
-            padding-top: 100vh; /* Space for the button */
+            padding-top: 100vh; 
         }
         .section {
             min-height: 100vh;
@@ -70,19 +70,22 @@
             position: fixed;
             bottom: 20px;
             left: 0;
-            border-radius: 0px;
-            width: 100%; /* Full width */
+            width: 100%; 
             z-index: 2;
-            font-size: 1.5rem; /* Increase font size */
-            padding: 15px; /* More padding */
-            background-color: rgb(202, 31, 31); /* Background color */
-            border-radius: 5px; /* Slightly rounded corners */
-            transition: opacity 0.3s; /* Smooth transition for hiding */
+            font-size: 1.5rem; 
+            padding: 15px; 
+            background-color:rgb(202, 31, 31); 
+            border-radius: 5px; 
+           
         }
         .learn-button.hidden {
-            opacity: 0; /* Hidden state */
-            pointer-events: none; /* Prevent clicks */
+            opacity: 0; 
+            pointer-events: none;
         }
+        .learn-button:hover {
+      color: rgba(88, 92, 99, 0.8);
+    cursor: pointer; 
+}
         .card {
             transition: transform 0.2s; 
             height: 250px; 
@@ -99,11 +102,29 @@
             flex-direction: column; 
             justify-content: space-between; 
         }
-        .section {
+      
+.section {
             padding: 40px 20px;
             background-color: white;
             color: black;
             position: relative; 
+        }
+
+        .social-icons {
+            position: absolute;
+            top: 20px; 
+            right: 20px; 
+        }
+
+        .icon {
+            color: #000; 
+            font-size: 1.5rem; 
+            margin-left: 15px; 
+            transition: color 0.3s; 
+        }
+
+        .icon:hover {
+            color: #007bff;
         }
 
         .hover-effect {
@@ -126,7 +147,7 @@
             text-decoration: underline;
         }
         .footer {
-            background-color: rgb(202, 31, 31); 
+            background-color:rgb(202, 31, 31); 
             color: white; 
             padding: 30px 20px; 
             position: relative;
@@ -158,40 +179,14 @@
             height: 200px; 
             object-fit: cover; 
         }
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: lightgrey;
-            color: black;
-            margin: 0;
-            padding: 0;
-        }
-        .section {
-            padding: 20px;
-        }
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .card {
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            margin: 10px;
-            text-align: center;
-        }
-        .card img {
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            width: 100%;
-            height: auto;
-        }
-        .card-content {
-            padding: 15px;
-        }
+        .box-button {
+    border-radius: 0; 
+    padding: 15px; 
+    text-align: center; 
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black; 
+}
+
     </style>
    
     <title>Air University</title>
@@ -214,16 +209,14 @@
                         <a class="nav-link" href="student.html">Student</a>
                     </li>
                     <li class="nav-item" style="margin: 3px;">
-                        <a class="nav-link" href="#">Faculty</a>
+                        <a class="nav-link" href="faculty.html">Faculty</a>
                     </li>
                     <li class="nav-item" style="margin: 3px;">
-                        <a class="nav-link" href="#">Staff</a>
+                        <a class="nav-link" href="staff.html">Staff</a>
                     </li>
                     <li class="nav-item" style="margin: 3px;">
-                        <a class="nav-link" href="#">Families</a>
+                        <a class="nav-link" href="family.html">Families</a>
                     </li>
-                    <li class="nav-item" style="margin: 3px;">
-                        <a class="nav-link" href="#">visitors</a>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -266,14 +259,8 @@
     </nav>
 
 <img src="https://www.stanford.edu/wp-content/uploads/2023/10/Hero-3-2-2048x1362.jpg" alt="Air University" class="university-image">
-<div class="row">
-    <div class="col-md-12 position-absolute top-50 start-50 translate-middle">
-            <h1 class="display-1 fw-bolder"
-                style="color: azure;margin-left: 720px;margin-bottom: 10px;font-family: 'Times New Roman', Times, serif;">
-                Air university</h1>
-</div>
 
-</div>
+
 <a href="#societymission" class="btn btn-danger btn-lg learn-button">Explore Air university</a>
 
 <div class="content">
@@ -421,46 +408,36 @@
 <div id="research" class="section" style="background-color: lightgrey;">
     <h2 class="display-1 fw-bold">Research</h2>
     <p class="display-5">Get in touch with us for more information.</p>
-    <div class="card-container">
-        <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Woods_Institute.jpg" alt="Contact Us">
-            <div class="card-content">
-                <h3 class="fw-bold"> Woods Institute</h3>
-                <p style="margin-top: 20px;">Working toward a future in which societies meet peoples needs for water,
-                     food and health while protecting and nurturing the planet.</p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://t4.ftcdn.net/jpg/03/14/92/75/360_F_314927575_yqFMAuXFTNC6gBflR2njRZ4bQb8dAb7y.jpg" alt="Digital Marketing Workshop" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Information Technology</h5>
+                        <p class="card-text">IT includes computers, networking, storage, and other physical devices.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2017/03/neuroscience-highlight.jpg" alt="Contact Us">
-            <div class="card-content">
-                <h3 class="fw-bold">Air Bio-X</h3>
-                <p style="margin-top: 20px;">Biomedical and life science researchers, clinicians, engineers, physicists
-                     and computational scientists come together to unlock the secrets of the human body.</p>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://media.istockphoto.com/id/1452604857/photo/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.jpg?s=612x612&w=0&k=20&c=GkAOxzduJbUKpS2-LX_l6jSKtyhdKlnPMo2ito4xpR4=" alt="Annual Science Fair" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Artificial Intelligence</h5>
+                        <p class="card-text">AI is an evolving technology that tries to simulate human intelligence using machines. </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2017/03/humanities-highlight.jpg" alt="Contact Us">
-            <div class="card-content">
-                <h3 class="fw-bold">Air humanity center</h3>
-                <p style="margin-top: 20px;">TAdvancing research into the historical, philosophical, literary, artistic, and cultural dimensions of the human experience.</p>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-light ">
+                    <img src="https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_640.jpg" alt="Cultural Festival" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Science</h5>
+                        <p class="card-text">CS is the study of computers and computational systems</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2022/04/HooverTower.jpg" alt="Contact Us">
-            <div class="card-content">
-                <h3 class="fw-bold">Hoover Institution</h3>
-                <p style="margin-top: 20px;">The Hoover Institution, devoted to the study of domestic and international affairs</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://www.stanford.edu/wp-content/uploads/2017/05/slac-01.jpg"alt="Contact Us">
-            <div class="card-content">
-                <h5 class="fw-bold"> Slac National Accelerator Laboratory</h5>
-                <p style="margin-top: 05px;">SLAC is a U.S. Department of Energy national laboratory operated by Stanford, conducting research in chemistry, materials and energy.</p>
-            </div>
-        </div>
-        
-    </div>
+   
     <hr class="border border-dark border-2 opacity-50" style="width: 1200px; margin-top: 110px;">
     <div class="row" style="margin-top: 15px ;">
       <div class="col-4">
@@ -475,11 +452,12 @@
         <h1 class="display-6 fw-bold" style="font-family: 'Times New Roman', Times, serif;">$1.98 Billion</h1>
         <p style="text-align: center; font-size: 20px;font-family: 'Times New Roman', Times, serif;">sponsored research budget</p>
       </div>
-      <hr class="border border-dark border-2 opacity-50" style="width: 1200px;margin-left: 330px;">
+      <hr class="border border-dark border-2 opacity-50" style="width: 1200px;">
 </div>
     <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 0px;">More about Research</button>
 </div>
-
+</div>
+</div>
 
 
     <div id="health-care" class="section" style="background-color: white; color: black;">
@@ -511,7 +489,7 @@
         <h1 class="display-6 fw-bold" style="font-family: 'Times New Roman', Times, serif;">540,000 +</h1>
         <p style="text-align: center; font-size: 20px;font-family: 'Times New Roman', Times, serif;">Annual prdict vist to Air Children’s</p>
       </div>
-      <hr class="border border-dark border-2 opacity-50" style="width: 1200px;margin-left: 330px;">
+      <hr class="border border-dark border-2 opacity-50" style="width: 1200px;margin-left: 300px;">
         </div>   
         <button type="button" class="btn btn-danger btn-lg fw-bold" style="height: 70px;border-radius: 0px;width: 500px;margin-top: 10px;">More about Health</button>
         
